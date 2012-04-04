@@ -28,17 +28,20 @@ var peopleInLine = [
 ];
 
 var waitingForShuttle = function (peopleInLine) {
-	 var leftInLine = 0;
+	 var boardedPassengers = [0];
 	 for (var i = 0, p = peopleInLine.length; i < p; i++) {
 		console.log ( peopleInLine[i] + " has entered the shuttle." );
-		leftInLine ++;
+		boardedPassengers.push(peopleInLine[i]);
+		boardedPassengers ++;		
 };    
 		console.log ("It's your turn to enter the shuttle.");
-		leftInLine ++;
-		return leftInLine; 
+		boardedPassengers ++;
+		return boardedPassengers; 
 };
 
 var onBoard = waitingForShuttle(peopleInLine)
+
+console.log (onBoard);
 // End Array Function. Use onBoard as returned variable. 
 
 
