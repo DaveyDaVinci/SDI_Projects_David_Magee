@@ -16,58 +16,64 @@ var goodRead = function (payGold, gotFree, readTablet) {
 };
 
 var readConfirm = goodRead(true, false, true);
-
 // End Boolean Function; use readConfirm as returned variable. 
+
 
 // Array Function;
 var peopleInLine = [
 	"Steve",
 	"Captain Renauld",
 	"Susan",
-	"Striker"
+	"Striker", 
 ];
 
 var waitingForShuttle = function (peopleInLine) {
+	 var leftInLine = 0;
 	 for (var i = 0, p = peopleInLine.length; i < p; i++) {
 		console.log ( peopleInLine[i] + " has entered the shuttle." );
+		leftInLine ++;
 };    
 		console.log ("It's your turn to enter the shuttle.");
-
-		return peopleInLine; 
+		leftInLine ++;
+		return leftInLine; 
 };
 
-var leftInLine = waitingForShuttle(peopleInLine)
-// End Array Function;
+var onBoard = waitingForShuttle(peopleInLine)
+// End Array Function. Use onBoard as returned variable. 
+
 
 // String Function 
 var declareName = function (name, birthday) {
-console.log ( "My name is " + name + ". My birthday is " + birthday + "." );
-return declareName;
+	var nameVariable ;
+		console.log ( "My name is " + name + ". My birthday is " + birthday + "." );
+		nameVariable = "passed";
+return nameVariable
 };
 
-var introduction = declareName("Jules", "November 29th, 2047");
+var passVerify = declareName("Jules", "November 29th, 2047");
+// End String Function. use passVerify as the returned variable. 
 
-// End String Function;
 
 // Number Function; 
 var playGameOnTablet = function (yourCoins) { 
 	var coinsPerGame = 2,
-		numberOfGames; 
+		numberOfGames = 0; 
 	while (yourCoins >= coinsPerGame) { 
-		console.log ( "You enjoy a game of Rong on the tablet." ); yourCoins -=2;
+		console.log ( "You enjoy a game of Rong on the tablet." ); 
+		yourCoins -= coinsPerGame;
+		numberOfGames ++;
 	};
 	console.log ( "You don't have enough coins to play a game." );
 	return numberOfGames;
 };
 
 var enjoyGames = playGameOnTablet(6); 
-
-console.log (enjoyGames);
-
+// use in final output console.log ( "You enjoy " + enjoyGames + "games while waiting for the " +
+//	"shuttle to launch. use enjoyGames as returned variable." );
 // End Number Function 
 
-// procedure 
 
+// procedure 
 var chooseDestination = function (destination) {
 	if (destination = "Danoran") { 
 		console.log ( "You get off at Danoran and enjoy the rest of your life " +
@@ -75,11 +81,10 @@ var chooseDestination = function (destination) {
 	} else { 
 		console.log ( "You decide to see how far the shuttle takes you. You're " + 
 		"still riding to this day. " );
-	};
+	};   return;
 };
 
 var destinationChoice = chooseDestination("Danoran");
-
 // end Prodedure 
 
 
