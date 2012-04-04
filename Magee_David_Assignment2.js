@@ -62,6 +62,8 @@ var playGameOnTablet = function (yourCoins) {
 
 var enjoyGames = playGameOnTablet(6); 
 
+console.log (enjoyGames);
+
 // End Number Function 
 
 // procedure 
