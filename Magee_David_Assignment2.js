@@ -28,20 +28,17 @@ var peopleInLine = [
 ];
 
 var waitingForShuttle = function (peopleInLine) {
-	 var boardedPassengers = [0];
+	 var boardedPassengers = [];
 	 for (var i = 0, p = peopleInLine.length; i < p; i++) {
 		console.log ( peopleInLine[i] + " has entered the shuttle." );
-		boardedPassengers.push(peopleInLine[i]);
-		boardedPassengers ++;		
+		boardedPassengers.push(peopleInLine[i])		
 };    
 		console.log ("It's your turn to enter the shuttle.");
-		boardedPassengers ++;
+		boardedPassengers.push( "you" );
 		return boardedPassengers; 
 };
 
 var onBoard = waitingForShuttle(peopleInLine)
-
-console.log (onBoard);
 // End Array Function. Use onBoard as returned variable. 
 
 
@@ -89,5 +86,24 @@ var chooseDestination = function (destination) {
 
 var destinationChoice = chooseDestination("Danoran");
 // end Prodedure 
+
+//FinalOutput
+
+console.log ( "Rumors that you reading confidential material are " + readConfirm 
+	+ ". " + onBoard[0] + ", " +onBoard[4] + ", " + onBoard[1] + ", " 
+	+ onBoard[2] + ", and " + onBoard[3] + 
+	" were all on board to testify to that. ");
+
+if (passVerify = "passed"){
+	console.log ("Luckily you passed the security inspection and were able " +
+	"to board the shuttle off planet. " );
+} else {
+	console.log ("Unfortunately, you failed the security inspection and had " +
+	"to stow away in the cargo hold. " )
+};
+
+console.log ( "You enjoyed the " + enjoyGames + " games you played on your " + 
+	"way to the destination. " );
+
 
 
