@@ -17,13 +17,7 @@ var goodRead = function (payGold, gotFree, readTablet) {
 
 var readConfirm = goodRead(true, false, true);
 
-
-
-
- 
-// End Boolean Function; use readConfirm as returned variable, or do I 
-// use didYouRead?  It doesn't work if I use didYouRead,but it does 
-// with readConfirm. 
+// End Boolean Function; use readConfirm as returned variable. 
 
 // Array Function;
 var peopleInLine = [
@@ -55,10 +49,11 @@ var introduction = declareName("Jules", "November 29th, 2047");
 
 // End String Function;
 
+// Number Function; 
 var playGameOnTablet = function (yourCoins) { 
 	var coinsPerGame = 2,
 		numberOfGames; 
-	while (yourCoins > coinsPerGame) { 
+	while (yourCoins >= coinsPerGame) { 
 		console.log ( "You enjoy a game of Rong on the tablet." ); yourCoins -=2;
 	};
 	console.log ( "You don't have enough coins to play a game." );
@@ -67,9 +62,22 @@ var playGameOnTablet = function (yourCoins) {
 
 var enjoyGames = playGameOnTablet(6); 
 
-console.log (enjoyGames)
+// End Number Function 
 
+// procedure 
 
+var chooseDestination = function (destination) {
+	if (destination = "Danoran") { 
+		console.log ( "You get off at Danoran and enjoy the rest of your life " +
+		"in peace. " );
+	} else { 
+		console.log ( "You decide to see how far the shuttle takes you. You're " + 
+		"still riding to this day. " );
+	};
+};
 
+var destinationChoice = chooseDestination("Danoran");
+
+// end Prodedure 
 
 
