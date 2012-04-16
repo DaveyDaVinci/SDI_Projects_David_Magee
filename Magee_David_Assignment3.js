@@ -8,9 +8,8 @@ var mainCharacter = {
 	race: "Human",
 	cash: function (inPocket,
 		prePurch) {
-			20 - 5;
-			return mainCharacter.cash
-	}
+			return (inPocket - prePurch);
+		}
 	
 };
 
