@@ -17,13 +17,22 @@ var mainCharacter = {
 		
 		} else {
 			console.log ("I'm the lady of the solar wind. ");
-		} return 
+			} return 
+		},
+	addCertification: function (training){ 
+		return mainCharacter.certifications.push(training);
 	}
+	
 	
 	
 };
 
+mainCharacter.catchPhrase(mainCharacter.sex);
+
 var yourCash = mainCharacter.cash(20,5);
+
+var certAdd = mainCharacter.addCertification("Squad Leadership Training");
 
 // test for returned value: console.log( yourCash );
 
+// test for returned value: console.log (mainCharacter.certifications);
