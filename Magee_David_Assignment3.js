@@ -59,8 +59,15 @@ var mainShip = { // object
 	getAddons: function (vi){
 		while (vi === true){
 			mainShip.addOns.intInhib = true;
-			return;
+				while (mainShip.addOns.intInhib = true){
+					mainShip.addOns.orgOver = true;
+					return;
+				};
 			}
+	},
+	doYouOwn: function (){
+		return mainShip.ownShip;
+		
 	}
 	
 	
@@ -70,7 +77,7 @@ mainShip.addCrew(mainShip.crewMembers);
 
 mainShip.getAddons(mainShip.addOns.vi);
 
-console.log(mainShip.addOns);
+
 
 
 
