@@ -29,13 +29,14 @@ var mainCharacter = { // object
 
 mainCharacter.catchPhrase(mainCharacter.sex);
 
-var yourCash = mainCharacter.cash(20,5);
+var yourCash = mainCharacter.cash(20000,500);
 
 var certAdd = mainCharacter.addCertification("Squad Leadership Training");
 
 
 var mainShip = { // object
 	ownShip: true, 
+	wantNew: true,
 	baseModel: "Viper R3",
 	addOns: {
 		boosters: true,
@@ -56,10 +57,10 @@ var mainShip = { // object
 			}
 			return addMember; // return array
 	},
-	getAddons: function (vi){
-		while (vi === true){
+	getAddons: function (vi){ // mutator
+		while (vi === true){ // while loop
 			mainShip.addOns.intInhib = true;
-				while (mainShip.addOns.intInhib = true){
+				while (mainShip.addOns.intInhib = true){//nested loop
 					mainShip.addOns.orgOver = true;
 					return;
 				};
@@ -67,7 +68,20 @@ var mainShip = { // object
 	},
 	doYouOwn: function (){
 		return mainShip.ownShip;
-		
+	},
+	buyNew: function (want,cash){
+		if (want = true){
+			if (cash >= 15000){
+				console.log("You just purchased the Eaglor.");// Nested conditional and returned boolean
+				mainShip.ownNew = true;
+			} else { 
+				console.log("You don't have enough to purchase the Eaglor.");
+				mainShip.ownNew = false;
+			}
+		} else {
+			console.log("No new ship for you."); 
+			mainShip.ownNew = false;
+		}
 	}
 	
 	
@@ -76,6 +90,11 @@ var mainShip = { // object
 mainShip.addCrew(mainShip.crewMembers);
 
 mainShip.getAddons(mainShip.addOns.vi);
+
+mainShip.buyNew(mainShip.wantNew, yourCash);
+
+
+
 
 
 
