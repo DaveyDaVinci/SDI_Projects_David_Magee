@@ -9,7 +9,7 @@ var json = {
 			"loyal": true
 			},
 		"member2": {
-			"name": "Lenne,
+			"name": "Lenne",
 			"rank": "Official", 
 			"age": 36,
 			"certifications" : [ "Basic training", "Classified Espionage Trainings" ],
@@ -40,7 +40,7 @@ var json = {
 			"homePlanet": "Earth",
 			"loyal": false
 			},
-	}, 
+	}
 	
 			
 };

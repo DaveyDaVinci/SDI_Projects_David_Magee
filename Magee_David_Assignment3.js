@@ -40,8 +40,8 @@ var mainShip = { // object
 	addOns: {
 		boosters: true,
 		stealthField: true,
-		aI: true, 
-		vI: false,
+		ai: true, 
+		vi: true,
 	}, 
 	crewMembers: [ 
 		"Steven",
@@ -56,15 +56,36 @@ var mainShip = { // object
 			}
 			return addMember; // return array
 	},
+	getAddons: function (vi){
+		while (vi === true){
+			mainShip.addOns.intInhib = true;
+			return;
+			}
+	}
 	
 	
 };
 
 mainShip.addCrew(mainShip.crewMembers);
 
+mainShip.getAddons(mainShip.addOns.vi);
+
+console.log(mainShip.addOns);
 
 
 
+/*
+var hiThere = true;
+
+var taco = function (hiThere){
+	while (hiThere === true){
+		console.log ("faceHere");
+		hiThere = false;
+	} 
+};
+
+taco(hiThere)
+*/
 // test for returned value: console.log( yourCash );
 
 // test for returned value: console.log (mainCharacter.certifications);
