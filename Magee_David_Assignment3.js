@@ -1,6 +1,6 @@
 var mainCharacter = { // object
 	name: "Soren",
-	sex: "Male",
+	sex: "Female",
 	certifications: [
 		"R3 Pilot",
 		"PPS Programming and documentation"
@@ -36,7 +36,7 @@ var certAdd = mainCharacter.addCertification("Squad Leadership Training");
 
 var mainShip = { // object
 	ownShip: true, 
-	wantNew: true,
+	wantNew: false,
 	baseModel: "Viper R3",
 	addOns: {
 		boosters: true,
@@ -66,32 +66,49 @@ var mainShip = { // object
 				};
 			}
 	},
-	doYouOwn: function (){
-		return mainShip.ownShip;
+	doYouOwn: function (own){ // accessor 
+		return own;
 	},
 	buyNew: function (want,cash){
-		if (want = true){
+		if (want === true){
 			if (cash >= 15000){
 				console.log("You just purchased the Eaglor.");// Nested conditional and returned boolean
 				mainShip.ownNew = true;
+				return true 
 			} else { 
 				console.log("You don't have enough to purchase the Eaglor.");
 				mainShip.ownNew = false;
+				return false; 
 			}
 		} else {
 			console.log("No new ship for you."); 
 			mainShip.ownNew = false;
+			return false;
 		}
+	},
+	sName: function (sex){
+		if (sex === "Male"){
+			return "Conquistador 5"; // return string
+		} else {
+			return "Sarasota Sailer";
+		}
+	
 	}
-	
-	
 };
 
 mainShip.addCrew(mainShip.crewMembers);
 
 mainShip.getAddons(mainShip.addOns.vi);
 
-mainShip.buyNew(mainShip.wantNew, yourCash);
+var noLoans = mainShip.doYouOwn(mainShip.ownShip) // accessor
+
+var didYouBuy = mainShip.buyNew(mainShip.wantNew, yourCash); 
+
+var shipName = mainShip.sName(mainCharacter.sex); 
+
+var mvpCrewMember = json.crewList.member4.name; //json data
+
+console.log("And the Crew Spotlight goes to " + mvpCrewMember + ".");
 
 
 
