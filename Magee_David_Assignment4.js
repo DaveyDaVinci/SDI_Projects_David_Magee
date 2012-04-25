@@ -25,9 +25,16 @@ var myLib = function (){
 		} else {
 			console.log("THank you for the address!");
 			return lib.email = true;
+		};
 	};
-};
-	
+	var dayMath = function (d1, d2){
+		var ms = d2 - d1;
+		var s = ms / 1000;
+		var m = s / 60;
+		var h = m / 60;
+		var d = h / 24;
+		return lib.dayDiff = d;
+	};
 
 	return {
 		"setDeciPlace": setDeciPlace,
@@ -35,6 +42,7 @@ var myLib = function (){
 		"sum": 0,
 		"validEmail": validEmail, 
 		"addArray": addArray,
+		"dayMath": dayMath
 		
 		
 	};
@@ -52,11 +60,31 @@ lib.setDeciPlace(5.331, 2); //setDeciPlace
 lib.phoneNum(432-278-2765); //set phone number
 
 lib.validEmail("herpderp@yerp.com");
+
 lib.addArray([5, "derp", "lol", 7]);
+
+lib.dayMath(new Date(1989, 04, 28), new Date(2012, 04, 28));
 
 console.log(lib);
 
-/*var addArray = function (array){
+
+
+//TESTS
+
+/* var dayMath = function (d1, d2){
+		var ms = d2 - d1;
+		var s = ms / 1000;
+		var m = s / 60;
+		var h = m / 60;
+		var d = h / 24;
+		return blip = d;
+		
+	};
+
+var blah = dayMath(new Date(1989, 04, 28), new Date(2012, 04, 28));
+console.log(blah);
+
+var addArray = function (array){
 		 for(var i = 0; i < array.length; i++) {
           sum = 0,
           v = (array[i]);
