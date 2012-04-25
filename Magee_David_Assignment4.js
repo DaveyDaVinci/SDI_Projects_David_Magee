@@ -35,6 +35,14 @@ var myLib = function (){
 		var d = h / 24;
 		return lib.dayDiff = d;
 	};
+	var upperCase = function (string){
+		var stringApart = string.replace(/\w\S*/g, function(txt){
+			return txt.charAt(0).toUpperCase() 
+			+ txt.substr(1).toLowerCase();
+			});
+   		return lib.ucString = stringApart;
+}
+	
 
 	return {
 		"setDeciPlace": setDeciPlace,
@@ -42,7 +50,8 @@ var myLib = function (){
 		"sum": 0,
 		"validEmail": validEmail, 
 		"addArray": addArray,
-		"dayMath": dayMath
+		"dayMath": dayMath,
+		"upperCase": upperCase
 		
 		
 	};
@@ -65,11 +74,22 @@ lib.addArray([5, "derp", "lol", 7]);
 
 lib.dayMath(new Date(1989, 04, 28), new Date(2012, 04, 28));
 
+lib.upperCase("Hello, newman");
+
 console.log(lib);
 
 
 
-//TESTS
+
+//herp = function(stringy){
+	//var bah = stringy.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() 
+	//+ txt.substr(1).toLowerCase();});
+   // return bah;
+//}
+
+//var berp = herp("Hello newman");
+//console.log(berp);
+
 
 /* var dayMath = function (d1, d2){
 		var ms = d2 - d1;
